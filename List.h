@@ -100,7 +100,7 @@ public:
             delete head;
             head = tail = iter = nullptr;
         }
-        // if size > 1
+            // if size > 1
         else {
             Node* toDelete = tail;
             tail = tail->prev;
@@ -144,6 +144,10 @@ public:
     // adv iter
     void advIter() {
         iter = iter->next;
+    }
+    // prev iter
+    void prevIter(){
+        iter = iter->prev;
     }
     // reset iter
     void resetIter() {
@@ -235,6 +239,10 @@ public:
         Node* temp = iter->prev;
         return temp->data;
     }
+    bool isNextNull(){
+        Node* temp = iter->next;
+        if(temp==nullptr)
+            return true;
+        return false;
+    }
 };
-
-

@@ -368,6 +368,8 @@ int outputPath(List<City> list, int c) {
 
 }
 void outputPathTop3(List<City> list, const int i, string dest, const int option) {
+    // get # of layovers
+    int layovers = list.getSize() - 2;
     cout << "  Itinerary "<<i<<": " << endl << "    ";
     int pathCost = 0, pathTime = 0;
     int count= 0;
@@ -446,5 +448,5 @@ void outputPathTop3(List<City> list, const int i, string dest, const int option)
             cout << " -> ";
         count++;
     }
-    cout << "Totals for Itinerary "<<i<< ":  Time: " << pathTime << ", Cost: " << pathCost << endl;
+    cout << "Totals for Itinerary "<<i<< ": Time: " << pathTime+layovers*43 << ", Cost: " << pathCost+layovers*23 << endl;
 }

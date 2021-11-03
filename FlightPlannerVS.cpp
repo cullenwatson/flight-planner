@@ -27,7 +27,7 @@ AdjacencyList createAdjacencyList(string flightData) {
                 City temp(city, dest, carr, cost, time);
                 list.push_back(temp);
             }
-            // else add the destination
+                // else add the destination
             else {
 
                 list.resetCityIter();
@@ -47,7 +47,7 @@ AdjacencyList createAdjacencyList(string flightData) {
                 list.push_back(temp);
 
             }
-            // else add the destination
+                // else add the destination
             else {
 
                 list.resetCityIter();
@@ -63,7 +63,7 @@ AdjacencyList createAdjacencyList(string flightData) {
             }
         }
     }
-   // cout << list << endl;
+    // cout << list << endl;
     return list;
 }
 void openFiles(string, string);
@@ -71,9 +71,8 @@ void optimizeTime(AdjacencyList, string, string);
 void optimizeCost(AdjacencyList, string, string);
 int outputPath(List<City>, int c);
 int main() {
-    openFiles("input.txt", "flights.txt");
+    openFiles("../input.txt", "../flights.txt");
 
-    system("pause>0");
     return 0;
 }
 void openFiles(string flightData, string requiredFlights) {
@@ -95,7 +94,7 @@ void openFiles(string flightData, string requiredFlights) {
                 std::cout << "Flight " << i + 1 << ": " << city << ", " << dest << " (Cost)" << endl;
                 optimizeCost(list, city, dest);
             }
-                
+
         }
 
     }
@@ -169,7 +168,7 @@ void optimizeCost(AdjacencyList list, string city, string dest) {
                 }
 
             }
-        finished:
+            finished:
 
             st.pop();
             continue;
@@ -207,7 +206,7 @@ void optimizeCost(AdjacencyList list, string city, string dest) {
     std::cout << endl;
 }
 void optimizeTime(AdjacencyList list, string city, string dest) {
-    
+
     List<City> first;
     List<City> second;
     List<City> third;
@@ -276,7 +275,7 @@ void optimizeTime(AdjacencyList list, string city, string dest) {
                 }
 
             }
-        finished:
+            finished:
 
             st.pop();
             continue;
@@ -308,7 +307,7 @@ void optimizeTime(AdjacencyList list, string city, string dest) {
             st.push(list.getCity(currDest));
         }
     }
-    
+
     outputPathTop3(first, 1, dest, 1);
     outputPathTop3(second, 2, dest, 1);
     outputPathTop3(third, 3, dest, 1);
@@ -324,14 +323,14 @@ int outputPath(List<City> list, int c) {
         if (list.hasPrev()) {
             DestCity& temp = list.getPrev().getDestCity(city);
             int size = temp.getSize();
-          //  cout<<"(";
+            //  cout<<"(";
 
-            
+
             temp.resetCarr();
             int lowestCost = temp.getCost();
             int lowestTime = temp.getTime();
             for (int i = 0; i < size; i++) {
-               // cout << temp.getCarr();
+                // cout << temp.getCarr();
                 //cout << "[" << temp.getCost() << "," << temp.getTime() << "]";
 
                 // get lowest time
@@ -346,27 +345,27 @@ int outputPath(List<City> list, int c) {
 
 
                 temp.advCarr();
-              //  if (size - i == 2)
-                  //  cout << ",";
+                //  if (size - i == 2)
+                //  cout << ",";
             }
-           // cout << ")";
+            // cout << ")";
             pathCost += lowestCost;
             pathTime += lowestTime;
         }
 
         list.advIter();
         // if city has next city
-     //   if (!list.isIterNull())
-           // cout << " -> ";
+        //   if (!list.isIterNull())
+        // cout << " -> ";
     }
-   // cout << " ["<<pathCost << ", " << pathTime <<"]"<< endl;
+    // cout << " ["<<pathCost << ", " << pathTime <<"]"<< endl;
     if(c==1)
         return pathTime;
     if (c == 2)
         return pathCost;
-   
-  
-  
+
+
+
 }
 void outputPathTop3(List<City> list, const int i, string dest, const int option) {
     cout << "  Itinerary "<<i<<": " << endl << "    ";
@@ -378,15 +377,12 @@ void outputPathTop3(List<City> list, const int i, string dest, const int option)
         string city = list.getIter().getCity();
         if(count==0 || city==dest)
             cout << city;
-        else {
-                cout << city <<carrier<< endl << "    " << city;
-        }
-            
+
 
         if (list.hasPrev()) {
             DestCity& temp = list.getPrev().getDestCity(city);
             int size = temp.getSize();
-           // cout << "(";
+            // cout << "(";
 
 
             temp.resetCarr();
@@ -408,35 +404,39 @@ void outputPathTop3(List<City> list, const int i, string dest, const int option)
                     lowestTime = time;
                     num = i;
                 }
-                
+
 
 
                 temp.advCarr();
                 /*if (size - i == 2)
                     cout << ",";*/
             }
-         //   cout << "[" << lowestCost << "," << lowestTime << "]";
-           // cout << ")";
+            //   cout << "[" << lowestCost << "," << lowestTime << "]";
+            // cout << ")";
             pathCost += lowestCost;
             pathTime += lowestTime;
 
-
+            if(count!=0 && city!=dest)
+                cout << city;
             temp.resetCarr();
             if (option == 1) {
                 for (int i = 0; i < num; i++) {
                     temp.advCarr();
                 }
                 carrier = temp.getCarr();
-                cout << " (" << carrier << ")";
+                cout << " (" << carrier << ")"<<endl<<"    "<<city;
+                string prevCity = city;
             }
             else if (option == 2) {
                 for (int i = 0; i < num2; i++) {
                     temp.advCarr();
                 }
                 carrier = temp.getCarr();
-                cout << " (" << carrier << ")";
+                cout << " (" << carrier << ")"<<endl<<"    "<<city;
+                string prevCity = city;
+
             }
-            
+
 
         }
         list.advIter();

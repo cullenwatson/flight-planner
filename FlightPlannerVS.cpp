@@ -424,17 +424,18 @@ void outputPathTop3(List<City> list, const int i, string dest, const int option)
                     temp.advCarr();
                 }
                 carrier = temp.getCarr();
-                cout << " (" << carrier << ")"<<endl<<"    "<<city;
-                string prevCity = city;
+                cout << " (" << carrier << ")"<<endl<<"    ";
+                if(!list.isNextNull())
+                    cout<<city;
             }
             else if (option == 2) {
                 for (int i = 0; i < num2; i++) {
                     temp.advCarr();
                 }
                 carrier = temp.getCarr();
-                cout << " (" << carrier << ")"<<endl<<"    "<<city;
-                string prevCity = city;
-
+                cout << " (" << carrier << ")"<<endl<<"    ";
+                if(!list.isNextNull())
+                    cout<<city;
             }
 
 
@@ -445,9 +446,5 @@ void outputPathTop3(List<City> list, const int i, string dest, const int option)
             cout << " -> ";
         count++;
     }
-    cout << endl;
-    cout << "    Totals for Itinerary "<<i<< ":  Time: " << pathTime << ", "<< " Cost: " << pathCost << endl;
-
-
-
+    cout << "Totals for Itinerary "<<i<< ":  Time: " << pathTime << ", Cost: " << pathCost << endl;
 }

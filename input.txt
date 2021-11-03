@@ -1,0 +1,27 @@
+26
+Dallas Buffalo 100 20 Spirit
+Dallas Buffalo 100 30 American
+Buffalo Dallas 100 30 American
+Buffalo Austin 10 70 American
+Austin NYC 40 100 Merica
+Dallas Houston 80 600 Texan
+Chicago Dallas 70 20 United
+Chicago Houston 60 200 Merica
+Buffalo Houston 50 20 Spirit
+Buffalo Houston 50 20 Spirit
+Houston Buffalo 50 20 Spirit
+Houston NYC 300 20 American
+Chicago NYC 200 40 Spirit
+Chicago Seattle 500 20 Delta
+Seattle Houston 20 300 Delta
+Seattle NYC 200 30 United
+Seattle Austin 500 20 American
+Washington Austin 300 200 Merica
+Houston Austin 500 1000 Texan
+Dallas Austin 100 100 Texan
+Chicago Washington 10 100 Delta
+Austin Washington 300 200 Merica
+Seattle Washington 400 20 Delta
+Washington Seattle 600 30 Merica
+Washington Houston 300 20 United
+Buffalo Chicago 20 200 Spirit

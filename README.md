@@ -13,7 +13,7 @@ There are two input files
 * Origination and Destination Data (`flights.txt`) - contains a sequence of city pairs representing 0-stop flights 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78247585/181828281-62ac22c3-ec3d-460f-ae97-e278e8359075.png">
+  <img src="https://user-images.githubusercontent.com/78247585/181829623-99c0ed43-1764-4c27-a3b4-11b30ee51d35.png">
 </p>
 
 
@@ -21,7 +21,7 @@ There are two input files
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78247585/181828326-090096b9-b774-4b41-9de2-6b9468c9cf8f.png">
+  <img src="https://user-images.githubusercontent.com/78247585/181829685-e4c742f9-bb23-4b35-882d-d2142e97b5d5.png">
 </p>
 
 
@@ -32,6 +32,6 @@ Compile and build using CMake. There are no command-line arguments.
 Output of the top three itineraries for each origin/destination pair will be displayed to the user, sorted by cost or time optimization
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78247585/181828747-4dbe4f30-7ddd-4411-b3d3-aa0075727745.png">
+  <img src="https://user-images.githubusercontent.com/78247585/181829726-f269f5c5-a89e-4dac-ac81-50d219ccaa7a.png">
 </p>
 

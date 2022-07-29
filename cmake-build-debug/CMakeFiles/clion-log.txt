@@ -1,4 +1,0 @@
-C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Users/pc/Documents/CLION Proj/flight-planner/cmake-build-debug' && /usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S '/mnt/c/Users/pc/Documents/CLION Proj/flight-planner' -B '/mnt/c/Users/pc/Documents/CLION Proj/flight-planner/cmake-build-debug'"
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/c/Users/pc/Documents/CLION Proj/flight-planner/cmake-build-debug

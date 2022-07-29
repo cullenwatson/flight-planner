@@ -1,3 +1,0 @@
-/mnt/c/Users/pc/Documents/CLION Proj/flight-planner/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/pc/Documents/CLION Proj/flight-planner/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/pc/Documents/CLION Proj/flight-planner/cmake-build-debug/CMakeFiles/flight_planner.dir

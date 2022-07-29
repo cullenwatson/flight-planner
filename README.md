@@ -6,7 +6,7 @@ Email: cgwatson@smu.edu
 
 # Functionality
 
-This program determines all possible flight plans for a person wishing to travel between two different cities. It uses iterative backtracking to exhaustively search all possible itineraries between an origin/destination city
+This program determines all possible flight plans for a person wishing to travel between two different cities. It uses iterative backtracking to exhaustively search all possible itineraries between an origin/destination city.
 
 There are two input files
 

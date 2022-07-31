@@ -10,7 +10,7 @@ This program determines all possible flight plans for a person wishing to travel
 
 There are two input files
 
-* Origination and Destination Data (`inputlflights.txt`) - contains a sequence of city pairs representing 0-stop flights 
+* Origination and Destination Data (`input/flights.txt`) - contains a sequence of city pairs representing 0-stop flights 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78247585/181829623-99c0ed43-1764-4c27-a3b4-11b30ee51d35.png">

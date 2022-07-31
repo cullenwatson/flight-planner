@@ -71,7 +71,7 @@ void optimizeTime(AdjacencyList, string, string);
 void optimizeCost(AdjacencyList, string, string);
 int outputPath(List<City>, int c);
 int main() {
-    openFiles("../input/requested.txt", "../input/flights.txt");
+    openFiles("../input/flights.txt", "../input/requested.txt");
 
     return 0;
 }

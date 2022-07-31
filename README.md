@@ -25,7 +25,9 @@ There are two input files
 </p>
 
 
-# How to Use
+# How to Run
+
+[Video Demo](https://youtu.be/Cjz2g_a-Iig)
 
 Compile and build using CMake. There are no command-line arguments. 
 
